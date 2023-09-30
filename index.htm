@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="phone">
+      <header>
+        <div class="time">7:45</div>
+        <div class="icons">
+          <img src="./icons/signal-solid.svg" alt="signal" />
+          <img src="./icons/wifi-solid.svg" alt="wifi" />
+          <img src="./icons/battery-full-solid.svg" alt="battery" />
+        </div>
+      </header>
+
+      <div class="keypad-page page">
+        <div class="add-number__container">
+          <div class="display"></div>
+          <button class="add-number" disabled>Add Number</button>
+        </div>
+
+        <div class="phone__buttons">
+          <div class="phone__buttons-first-row">
+            <button class="keypad-btn">1</button>
+            <button class="keypad-btn">2</button>
+            <button class="keypad-btn">3</button>
+          </div>
+          <div class="phone__buttons-second-row">
+            <button class="keypad-btn">4</button>
+            <button class="keypad-btn">5</button>
+            <button class="keypad-btn">6</button>
+          </div>
+          <div class="phone__buttons-third-row">
+            <button class="keypad-btn">7</button>
+            <button class="keypad-btn">8</button>
+            <button class="keypad-btn">9</button>
+          </div>
+          <div class="phone__buttons-fourth-row">
+            <button class="keypad-btn">*</button>
+            <button class="keypad-btn">0</button>
+            <button class="keypad-btn">#</button>
+          </div>
+          <a class="delete">
+            <img src="./icons/delete-left-solid.svg" alt="delete" />
+          </a>
+        </div>
+      </div>
+
+      <div class="create-contact page hidden">
+        <div class="save-contact">
+          <a class="cancel">Cancel</a>
+          <a class="save">Save</a>
+        </div>
+        <p class="duplicateNumber hidden"></p>
+        <input class="input_name" type="text" placeholder="Name" />
+        <input class="input_firstName" type="text" placeholder="First Name" />
+        <input class="input_number" type="text" placeholder="Phone Number" />
+      </div>
+
+      <div class="contacts-page page hidden">
+        <input class="filter" type="text" placeholder="Search" />
+        <div class="display-all-contacts"></div>
+      </div>
+
+      <div class="contact-details page hidden">
+        <div class="delete-edit">
+          <a class="delete-contact">Delete</a>
+          <a class="edit-contact">Edit</a>
+          <a class="save-edited-contact hideBtn">Save</a>
+        </div>
+        <input
+          id="contact_name"
+          class="allow-edit not-allow-edit"
+          type="text"
+          placeholder="Name"
+          readonly
+        />
+        <input
+          id="contact_firstName"
+          class="allow-edit not-allow-edit"
+          type="text"
+          placeholder="First Name"
+          readonly
+        />
+        <input
+          id="contact_number"
+          class="allow-edit not-allow-edit"
+          type="text"
+          placeholder="Phone Number"
+          readonly
+        />
+        <button class="favorite-btn">Remove as favorite</button>
+      </div>
+
+      <div class="favorites-page page hidden">
+        <input class="filter" type="text" placeholder="Search" />
+        <div class="display-all-favorites"></div>
+      </div>
+
+      <footer>
+        <a class="favorites">
+          <img src="./icons/star-solid.svg" alt="favorites" />
+          Favorites
+        </a>
+        <a class="contacts">
+          <img src="./icons/address-book-solid.svg" alt="contacts" />
+          Contacts
+        </a>
+        <a class="keypad">
+          <img src="./icons/keypad.svg" alt="keypad" />
+          Keypad
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

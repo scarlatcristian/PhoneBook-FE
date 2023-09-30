@@ -1,0 +1,395 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* PHONE */
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background-color: #070707;
+  border: 20px solid #000;
+  border-radius: 40px;
+  position: relative;
+
+  height: 60rem;
+  width: 30rem;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  visibility: none;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #0d0d0d;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+
+  height: 3rem;
+  width: 100%;
+}
+
+header .icons img {
+  height: 1.5rem;
+  margin-left: 0.2rem;
+}
+
+/* PHONE BUTTONS */
+.add-number__container {
+  text-align: center;
+  color: #fff;
+  height: 10rem;
+}
+
+.display {
+  height: 6rem;
+  font-size: 4rem;
+}
+
+.add-number__container .add-number {
+  background: transparent;
+  border: none;
+  color: #0a58ca;
+  cursor: pointer;
+  font-size: 2rem;
+  opacity: 0;
+
+  text-decoration: none;
+  transition: opacity 0.3s ease-in;
+}
+
+.phone__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.phone__buttons-first-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.phone__buttons-second-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.phone__buttons-third-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.phone__buttons-fourth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.phone__buttons .keypad-btn {
+  background-color: #8c8b8b;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+
+  transition: all 0.2s ease-in;
+
+  margin: 1rem;
+  width: 6rem;
+  height: 4rem;
+}
+
+.phone__buttons .keypad-btn:hover {
+  background-color: #4a4a4a;
+}
+
+.phone__buttons .delete {
+  display: flex;
+  justify-content: flex-end;
+
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  width: 100%;
+}
+
+.phone__buttons .delete img {
+  height: 3rem;
+  margin-right: 2rem;
+}
+
+/* CREATE CONTACT */
+.create-contact {
+  height: 100%;
+  width: 100%;
+}
+
+.duplicateNumber {
+  color: rgb(187, 28, 28);
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.create-contact input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+
+  font-size: 1.5rem;
+  padding: 0.5rem;
+
+  width: 100%;
+}
+
+.create-contact input:focus {
+  outline: none;
+}
+
+/* remove arrows from input type number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.save-contact {
+  display: flex;
+  justify-content: space-between;
+
+  color: #0a58ca;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  margin-bottom: 5rem;
+}
+
+.save-contact a {
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.1s ease-in;
+}
+
+/* CONTACTS-PAGE */
+.contacts-page {
+  overflow: auto;
+
+  height: 100%;
+  width: 100%;
+}
+
+.filter {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+
+  height: 3rem;
+  width: 90%;
+}
+
+.filter:focus {
+  outline: none;
+}
+
+.display-all-contacts {
+  overflow: auto;
+
+  height: 100%;
+  width: 100%;
+}
+
+.contact {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding: 0.5rem;
+
+  transition: all 0.2s ease-in;
+}
+
+.contact:first-child {
+  margin-top: 1rem;
+}
+
+.contact:hover {
+  background-color: #1c1b1b;
+}
+
+/* CONTACT-DETAILS */
+.contact-details {
+  height: 100%;
+  width: 100%;
+}
+
+.delete-edit {
+  display: flex;
+  justify-content: space-between;
+
+  color: #0a58ca;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  margin-bottom: 5rem;
+}
+
+.delete-edit a {
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.1s ease-in;
+}
+
+.contact-details input {
+  transition: all 0.2s ease-in;
+}
+
+.contact-details .allow-edit {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 0.5rem;
+
+  width: 100%;
+}
+
+.contact-details .allow-edit:focus {
+  outline: none;
+}
+
+.contact-details .not-allow-edit {
+  background-color: transparent;
+  cursor: auto;
+  font-style: normal;
+}
+
+.hideBtn {
+  visibility: 0;
+  display: none;
+}
+
+.favorite-btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin-top: 2rem;
+
+  transition: all 0.2s ease-in;
+  width: 13rem;
+  height: 3.5rem;
+}
+
+.favorite-btn:hover {
+  border-color: goldenrod;
+  color: goldenrod;
+}
+
+/* FAVORITES-PAGE */
+.favorites-page {
+  overflow: auto;
+
+  height: 100%;
+  width: 100%;
+}
+
+.display-all-contacts {
+  overflow: auto;
+
+  height: 100%;
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0d0d0d;
+
+  height: 5rem;
+  width: 100%;
+}
+
+footer a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: #8c8b8b;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer img {
+  height: 2.5rem;
+}
